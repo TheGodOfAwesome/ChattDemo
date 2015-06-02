@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical|center_horizontal"
+    android:background="@drawable/dialogs">
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:paddingTop="10dip">
+        <ImageView 
+            android:id="@+id/dialog_title_image"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_launcher"/>
+        <TextView 
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="20dp"
+            android:layout_centerInParent="true"
+            android:text="@string/suggestions_label"
+            android:layout_toRightOf="@id/dialog_title_image"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+        
+        <!-- Lista -->
+    </RelativeLayout>
+    <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="3dip"
+            android:background="#00B863"/>
+    <ListView
+            android:id="@+id/component_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+   
+    <!-- Fine lista -->
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dip"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="20dip">
+        <Button 
+            android:id="@+id/positive_button"
+            android:layout_alignParentLeft="true"
+            android:layout_width="120dip"
+            android:layout_height="wrap_content"
+            android:background="#00B863"
+            android:textColor="@android:color/white"
+            android:text="@string/close"/>
+      
+    </RelativeLayout>
+</LinearLayout>

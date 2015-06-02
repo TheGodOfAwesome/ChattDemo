@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chatt.demo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="18" />
+    
+     <!-- Permissions that are required for messaging -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- Permissions that are required for retrieving map data -->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	
+	<!-- Permissions that are recommended for using map and location services -->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	
+	<!-- Recommended: prevents app installation if required level of Open GL is not supported -->
+	<uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" android:name="ChattApp">
+        <activity
+            android:name="Login"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+             <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="Register"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        
+        <activity
+            android:name="UserList"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="Chat"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        
+        <activity 
+            android:name="com.chatt.demo.wadii.database.LocationDatabaseActivity" 
+            android:label="Database Activity">
+        </activity>
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.MapsActivity" 
+            android:label="Map Activity">
+        </activity>
+         <activity 
+            android:name="com.chatt.demo.wadii.maps.About" 
+            android:label="About">
+        </activity>
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.IndoorExample" 
+            android:label="Indoor">
+        </activity>     
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.MapMarkers" 
+            android:label="Map markers">
+        </activity>     
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.ShowMap" 
+            android:label="Show Map">
+        </activity>     
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.RouteMapper" 
+            android:label="Route">
+        </activity>
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.MapMe" 
+            android:label="Map Me">
+        </activity>     
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.Help" 
+            android:label="Help" 
+            android:theme="@android:style/Theme.Holo.Dialog">
+        </activity>     
+        <activity 
+            android:name="com.chatt.demo.wadii.maps.Settings" 
+            android:label="Settings" 
+            android:theme="@android:style/Theme.Holo.Dialog">
+        </activity>     
+        <activity android:name="com.chatt.demo.wadii.maps.Prefs" 
+            android:label="Prefs" 
+            android:theme="@android:style/Theme.Holo">
+        </activity>     
+        
+        <!-- M33new GoogleMaps api key-->
+        <meta-data
+			android:name="com.google.android.maps.v2.API_KEY"
+			android:value="AIzaSyDweE1WnQzXXBxeNyn9vDMjZfrpnCp-WVc" />
+        
+        <!-- Castor GoogleMaps api key-->
+        <!-- <meta-data
+			android:name="com.google.android.maps.v2.API_KEY"
+			android:value="AIzaSyCcm519kqvXzTA3lcts8rP5mRfyd1JDg2g" /> -->
+			
+		<!-- M81 GoogleMaps api key-->
+        <!-- <meta-data
+			android:name="com.google.android.maps.v2.API_KEY"
+			android:value="AIzaSyAnotDei0dK5YPRt7BcJQhXM7ZNOp2pACw" /> -->
+        
+        <meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>
