@@ -1,8 +1,6 @@
 #Chatt Demo
 ==============
 
-Passphrase is a suite of apps built for two factor authentication 
-using one time password (OTP)
 Chatt Demo is an android chat application that has the added functionality of being 
 a mapping service to help suggest and arrange appropriate meeting places depending 
 on distance from the users' current locations.
